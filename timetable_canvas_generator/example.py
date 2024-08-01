@@ -18,8 +18,10 @@ def convert_to_timetable(df):
         course_info = f"{row['info']}"
 
         # Find the corresponding time slot index
-        start_index = time_slots.index(start_time.strftime('%H:%M'))
-        end_index = time_slots.index(end_time.strftime('%H:%M'))
+        # start_index = time_slots.index(start_time.strftime('%H:%M')) # if it is datetime object
+        # end_index = time_slots.index(end_time.strftime('%H:%M')) # if it is datetime object
+        start_index = time_slots.index(start_time)
+        end_index = time_slots.index(end_time)
 
         # Fill the timetable for the duration of the course
         for i in range(start_index, end_index):
