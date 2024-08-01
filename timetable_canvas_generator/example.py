@@ -40,4 +40,4 @@ df = pd.DataFrame(data)
 # Call the convert_to_timetable function
 timetable = convert_to_timetable(df)
 
-timetable_canvas_generator(convert_to_timetable(df))
+timetable_canvas_generator(timetable)
