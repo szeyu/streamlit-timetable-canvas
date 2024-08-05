@@ -43,7 +43,7 @@ else:
 # `declare_component` and call it done. The wrapper allows us to customize
 # our component's API: we can pre-process its input args, post-process its
 # output value, and add a docstring for users.
-def timetable_canvas_generator(timetables, key=None):
+def timetable_canvas_generator(timetables, timetableType, Gheight, key=None):
 
     # Call through to our private component function. Arguments we pass here
     # will be sent to the frontend, where they'll be available in an "args"
@@ -51,7 +51,12 @@ def timetable_canvas_generator(timetables, key=None):
     #
     # "default" is a special argument that specifies the initial return
     # value of the component before the user has interacted with it.
-    component_value = _component_func(timetables=timetables, key=key, default=None)
+
+    timetableType = [
+        [{"index": str(i), "name": t}, 1] for i, t in enumerate(timetableType, start=1)
+    ]
+
+    component_value = _component_func(timetables=timetables, timetableType=timetableType, Gheight=Gheight, key=key, default=None)
 
     # We could modify the value returned from the component if we wanted.
     # There's no need to do this in our simple example - but it's an option.

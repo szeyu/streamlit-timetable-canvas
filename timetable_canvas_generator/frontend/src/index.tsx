@@ -224,25 +224,27 @@ function onRender(event: Event): void {
   const data = (event as CustomEvent<RenderData>).detail;
   const timetables = data.args.timetables;
   const week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-  const timetableType = [
-    [{ index: '1', name: '08:00' }, 1],
-    [{ index: '2', name: '09:00' }, 1],
-    [{ index: '3', name: '10:00' }, 1],
-    [{ index: '4', name: '11:00' }, 1],
-    [{ index: '5', name: '12:00' }, 1],
-    [{ index: '6', name: '13:00' }, 1],
-    [{ index: '7', name: '14:00' }, 1],
-    [{ index: '8', name: '15:00' }, 1],
-    [{ index: '9', name: '16:00' }, 1],
-    [{ index: '10', name: '17:00' }, 1],
-    [{ index: '11', name: '18:00' }, 1],
-    [{ index: '12', name: '19:00' }, 1],
-    [{ index: '13', name: '20:00' }, 1]
-  ];
+  // const timetableType = [
+  //   [{ index: '1', name: '08:00' }, 1],
+  //   [{ index: '2', name: '09:00' }, 1],
+  //   [{ index: '3', name: '10:00' }, 1],
+  //   [{ index: '4', name: '11:00' }, 1],
+  //   [{ index: '5', name: '12:00' }, 1],
+  //   [{ index: '6', name: '13:00' }, 1],
+  //   [{ index: '7', name: '14:00' }, 1],
+  //   [{ index: '8', name: '15:00' }, 1],
+  //   [{ index: '9', name: '16:00' }, 1],
+  //   [{ index: '10', name: '17:00' }, 1],
+  //   [{ index: '11', name: '18:00' }, 1],
+  //   [{ index: '12', name: '19:00' }, 1],
+  //   [{ index: '13', name: '20:00' }, 1]
+  // ];
+  const timetableType = data.args.timetableType
   const key = data.args.key;
+  const Gheight = data.args.Gheight
   const highlightWeek = new Date().getDay();
   const styles = {
-    Gheight: 180,
+    Gheight: Gheight,
     leftHandWidth: 60,
     palette: ["#71bdb6", "#71bdb6", "#71bdb6", "#71bdb6", "#71bdb6",
               "#71bdb6", "#71bdb6", "#71bdb6", "#71bdb6", "#71bdb6",
