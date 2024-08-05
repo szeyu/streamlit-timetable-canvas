@@ -255,6 +255,12 @@ function onRender(event: Event): void {
               "#71bdb6", "#71bdb6", "#71bdb6", "#71bdb6", "#71bdb6"]
   };
 
+  // Create a button to download the canvas as a PNG image
+  const captureButton = document.querySelector('.capture');
+  if (captureButton) {
+    captureButton.setAttribute('onclick', `captureAndDownloadPNG('${key}')`);
+  }
+
   // Create a unique ID for the timetable container
   const containerId = `coursesTable-${key}`;
 
@@ -292,3 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Tell Streamlit to update our initial height
   Streamlit.setFrameHeight();
 });
+function captureAndDownloadPNG(key: any): any {
+  throw new Error("Function not implemented.");
+}
+

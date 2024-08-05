@@ -9,7 +9,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     package_data={
-        'timetable_selector': [
+        'timetable_canvas_generator': [
             'frontend/build/*',
         ],
     },

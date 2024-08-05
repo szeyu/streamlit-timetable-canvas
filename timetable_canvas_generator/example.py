@@ -1,5 +1,6 @@
 from timetable_canvas_generator import timetable_canvas_generator
 import pandas as pd
+import streamlit as st
 
 def convert_to_timetable(df):
     # Define the days of the week and time slots
@@ -40,4 +41,5 @@ df = pd.DataFrame(data)
 # Call the convert_to_timetable function
 timetable = convert_to_timetable(df)
 
-timetable_canvas_generator(timetable)
+timetable_canvas_generator(timetable, key="combination_1")
+timetable_canvas_generator(timetable, key="combination_2")

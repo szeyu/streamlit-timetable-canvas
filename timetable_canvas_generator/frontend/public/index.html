@@ -93,6 +93,27 @@
       <div class="timetable-wrapper">
 
       </div>
-    <!-- <script src="path/to/compiled/index.js"></script> -->
+      <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+      <script>
+        (function() {
+            window.captureAndDownloadPNG = function(key) {
+                setTimeout(function() {
+                    var timetableElement = document.querySelector("#coursesTable-" + key)?.querySelector("#courseWrapper");
+                    if (timetableElement) {
+                        console.log("Element found:", timetableElement);
+                        html2canvas(timetableElement).then(canvas => {
+                            var link = document.createElement('a');
+                            link.download = 'timetable.png';
+                            link.href = canvas.toDataURL();
+                            link.click();
+                        });
+                    } else {
+                        console.error("Element not found");
+                    }
+                }, 500); // Adjust the delay as necessary
+            };
+        })();
+      </script>
+      <button class="capture" onclick="captureAndDownloadPNG('key')">Download PNG</button>
   </body>
 </html>

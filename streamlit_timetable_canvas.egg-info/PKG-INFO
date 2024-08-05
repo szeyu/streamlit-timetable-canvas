@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: streamlit-timetable-canvas
+Version: 0.0.1
+Summary: Streamlit component that allows you to generate timetable canvas
+Author: Sze Yu Sim
+Author-email: szeyu.sim@embeddedllm.com
+Requires-Dist: streamlit>=0.63
