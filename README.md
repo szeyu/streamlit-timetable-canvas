@@ -9,7 +9,7 @@ pip install -e git+https://github.com/szeyu/streamlit-timetable-canvas.git@main#
 
 ## Usage instructions
 
-![Demo Image](\\resources\\Screenshot%202024-08-01%20153147.png)
+![Demo Image](resources\\Screenshot%202024-08-01%20153147.png)
 
 ```python
 from timetable_canvas_generator import timetable_canvas_generator
