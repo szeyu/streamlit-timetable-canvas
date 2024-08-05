@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="streamlit-timetable-canvas",
-    version="0.0.1",
+    version="0.0.2",
     author="Sze Yu Sim",
     author_email="szeyu.sim@embeddedllm.com",
     description="Streamlit component that allows you to generate timetable canvas",

@@ -9,16 +9,16 @@ pip install -e git+https://github.com/szeyu/streamlit-timetable-canvas.git@main#
 
 ## Usage instructions
 
-![Demo Image](https://github.com/szeyu/streamlit-timetable-canvas/blob/main/resources/Screenshot%202024-08-01%20153147.png)
+![Demo Image](\\resources\\Screenshot%202024-08-01%20153147.png)
 
 ```python
 from timetable_canvas_generator import timetable_canvas_generator
 import pandas as pd
 
+days = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY']
+time_slots = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00']
 def convert_to_timetable(df):
     # Define the days of the week and time slots
-    days = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY']
-    time_slots = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00']
 
     # Initialize the timetable with empty strings
     timetable = [['' for _ in range(len(time_slots))] for _ in range(len(days))]
@@ -54,5 +54,6 @@ df = pd.DataFrame(data)
 # Call the convert_to_timetable function
 timetable = convert_to_timetable(df)
 
-timetable_canvas_generator(timetable)
+timetable_canvas_generator(timetable, timetableType=time_slots, Gheight=100, key="combination_1")
+timetable_canvas_generator(timetable, timetableType=time_slots, Gheight=50, key="combination_2")
 ```
